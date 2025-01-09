@@ -12,5 +12,7 @@ Now you have option to hold the number or you roll the dice again and again as y
 If you get 1 on your dice then your all current score has gone, then player2 has chance to score.
 ## Goal
 If you complete the goal of score : 100 then you won the game.
+## New Game 
+If you want to play again you can play by hit the New Game button.
 
 
