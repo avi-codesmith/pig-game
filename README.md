@@ -1,5 +1,6 @@
 # About 1v1 pig game
 ## This is a 1v1 number holding game 
+## [Click to play!](https://pig-game-2v2.netlify.app/)
 ![Screenshot from 2025-01-09 16-55-28](https://github.com/user-attachments/assets/c3befe07-56ef-4dab-9181-3d4ea3d4597b)
 
 ## How to Play
