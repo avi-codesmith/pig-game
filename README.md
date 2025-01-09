@@ -3,39 +3,14 @@
 ## [Click to play!](https://pig-game-2v2.netlify.app/)
 ![Screenshot from 2025-01-09 16-55-28](https://github.com/user-attachments/assets/c3befe07-56ef-4dab-9181-3d4ea3d4597b)
 
-## How to Play
+# How to Play
+## Starting game 
+First start the game by roll the dice.
+## Choosing 
+Now you have option to hold the number or you roll the dice again and again as your wish to increase your own score.
+## If you get (1)
+If you get 1 on your dice then your all current score has gone, then player2 has chance to score.
+## Goal
+If you complete the goal of score : 100 then you won the game.
 
-### 1. Start the Game
-To start the game, click on the "Start" button. Once you click it, the game will initialize and you'll be ready to play.
 
-### 2. Game Objective
-The goal of the game is [describe the objective of the game]. You will need to [specific action or tasks to achieve the goal].
-
-### 3. Controls
-- **Arrow keys**: Move your character around.
-- **Spacebar**: Jump or perform an action.
-- **Enter**: Start/continue the game.
-
-### 4. Scoring
-You earn points by [describe how points are scored]. The game ends when you [describe how the game ends].
-
-### 5. Tips
-- Tip 1: [Some helpful tip for players]
-- Tip 2: [Another tip]
-
-## How to Install
-
-1. Download the game files from [this link].
-2. Extract the files to a folder on your computer.
-3. Open the `index.html` file in your web browser to start playing.
-
-## Troubleshooting
-
-- If the game doesn't load, make sure you have the latest version of your browser.
-- If you encounter bugs, please report them to [email/contact].
-
-## License
-This game is licensed under [License Type].
-
-## Acknowledgments
-Thank you to [contributors, libraries, etc.] for their support and contributions.
