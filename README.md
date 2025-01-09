@@ -4,15 +4,15 @@
 ![Screenshot from 2025-01-09 16-55-28](https://github.com/user-attachments/assets/c3befe07-56ef-4dab-9181-3d4ea3d4597b)
 
 # How to Play
-## Starting game 
+## Starting game :
 First start the game by roll the dice.
-## Choosing 
+## Choosing :
 Now you have option to hold the number or you roll the dice again and again as your wish to increase your own score.
-## If you get (1)
+## If you get (1) :
 If you get 1 on your dice then your all current score has gone, then player2 has chance to score.
-## Goal
+## Goal :
 If you complete the goal of score : 100 then you won the game.
-## New Game 
+## New Game :
 If you want to play again you can play by hit the New Game button.
 
 
