@@ -15,4 +15,9 @@ If you complete the goal of score : 100 then you won the game.
 ## New Game :
 If you want to play again you can play by hit the New Game button.
 
+# Features
+## Sound button
+At the top right corner you have sound button to mute or unmute.
+
+
 
