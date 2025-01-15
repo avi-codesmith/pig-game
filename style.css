@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  user-select: none;
 }
 
 html {
@@ -20,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* LAYOUT */
@@ -185,4 +187,14 @@ main {
   100% {
     transform: translate(-50%) rotate(360deg) scale(1.2); /* Center and full rotation */
   }
+}
+
+.sound {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  filter: invert(90%);
 }

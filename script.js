@@ -12,6 +12,7 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
+const sound = document.querySelector(".sound");
 
 // Load dice roll sound
 const diceRollSound = new Audio("sounddice.mp3");
@@ -22,7 +23,7 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
-
+let volume = true;
 // Starting Conditions
 
 score0El.textContent = 0;
@@ -33,10 +34,12 @@ diceEl.classList.add("hidden");
 btnRoll.addEventListener("click", function () {
   if (playing) {
     // Reset and play dice roll sound
-    diceRollSound.currentTime = 0; // Reset to start
-    diceRollSound
-      .play()
-      .catch((error) => console.error("Audio playback error:", error));
+    if (volume) {
+      diceRollSound.currentTime = 0; // Reset to start
+      diceRollSound
+        .play()
+        .catch((error) => console.error("Audio playback error:", error));
+    }
 
     document.querySelector(".dice").classList.add("diceMove");
 
@@ -83,9 +86,11 @@ btnHold.addEventListener("click", function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove("player--active");
       // win.currentTime = 0; // Reset to start
-      win
-        .play()
-        .catch((error) => console.error("Audio playback error:", error));
+      if (volume) {
+        win
+          .play()
+          .catch((error) => console.error("Audio playback error:", error));
+      }
     } else {
       document.querySelector(`#current--${activePlayer}`).textContent = 0;
       current0El.textContent = 0;
@@ -93,14 +98,27 @@ btnHold.addEventListener("click", function () {
       activePlayer = activePlayer === 0 ? 1 : 0;
       player0El.classList.toggle("player--active");
       player1El.classList.toggle("player--active");
-      hold.currentTime = 0;
-      hold
-        .play()
-        .catch((error) => console.error("Audio playback error:", error));
+
+      if (volume) {
+        hold.currentTime = 0;
+        hold
+          .play()
+          .catch((error) => console.error("Audio playback error:", error));
+      }
     }
   }
 });
 
 document.querySelector(".btn--new").addEventListener("click", function () {
   location.reload();
+});
+
+sound.addEventListener("click", function () {
+  if (sound.src.includes("volume.png")) {
+    sound.src = "mute.png";
+    volume = false;
+  } else if (sound.src.includes("mute.png")) {
+    sound.src = "volume.png";
+    volume = true;
+  }
 });
