@@ -114,13 +114,11 @@ if (playing) {
     diceEl.classList.add("hidden");
     score0El.textContent = 0;
     score1El.textContent = 0;
-    current0El.textContent = 0;
-    current1El.textContent = 0;
+    document.querySelector(`#current--${activePlayer}`).textContent = 0;
+
     currentScore = 0;
     scores = [0, 0];
     diceEl.classList.add("hidden");
-    player0El.classList.toggle("player--active");
-    player1El.classList.toggle("player--active");
   });
 }
 
