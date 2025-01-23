@@ -119,6 +119,8 @@ if (playing) {
     currentScore = 0;
     scores = [0, 0];
     diceEl.classList.add("hidden");
+    player0El.classList.toggle("player--active");
+    player1El.classList.toggle("player--active");
   });
 }
 
