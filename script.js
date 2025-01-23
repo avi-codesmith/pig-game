@@ -19,7 +19,7 @@ const diceRollSound = new Audio("sounddice.mp3");
 const win = new Audio("win.mp3");
 const hold = new Audio("hold.mp3");
 
-const scores = [0, 0];
+let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
@@ -109,9 +109,18 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-document.querySelector(".btn--new").addEventListener("click", function () {
-  location.reload();
-});
+if (playing) {
+  document.querySelector(".btn--new").addEventListener("click", function () {
+    diceEl.classList.add("hidden");
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+    currentScore = 0;
+    scores = [0, 0];
+    diceEl.classList.add("hidden");
+  });
+}
 
 sound.addEventListener("click", function () {
   if (sound.src.includes("volume.png")) {
