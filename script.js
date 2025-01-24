@@ -77,7 +77,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add("hidden");
       document
@@ -110,11 +110,13 @@ btnHold.addEventListener("click", function () {
   }
 });
 btnNew.addEventListener("click", function () {
-  location.reload();
   if (volume) {
-    newgame
-      .play()
-      .catch((error2) => console.error("Audio playback error:", error2));
+    newgame.play();
+    newgame.addEventListener("ended", function () {
+      location.reload();
+    });
+  } else {
+    location.reload();
   }
 });
 
