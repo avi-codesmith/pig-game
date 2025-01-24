@@ -64,6 +64,8 @@ btnRoll.addEventListener("click", function () {
       current0El.textContent = 0;
       currentScore = 0;
       activePlayer = activePlayer === 0 ? 1 : 0;
+      player0El.classList.toggle("player--active");
+      player1El.classList.toggle("player--active");
     }
   }
 });
@@ -75,7 +77,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 10) {
       playing = false;
       diceEl.classList.add("hidden");
       document
@@ -108,16 +110,12 @@ btnHold.addEventListener("click", function () {
   }
 });
 btnNew.addEventListener("click", function () {
-  diceEl.classList.add("hidden");
-  score0El.textContent = 0;
-  score1El.textContent = 0;
-  document.querySelector(`#current--${activePlayer}`).textContent = 0;
-  newgame
-    .play()
-    .catch((error2) => console.error("Audio playback error:", error2));
-  currentScore = 0;
-  scores = [0, 0];
-  diceEl.classList.add("hidden");
+  location.reload();
+  if (volume) {
+    newgame
+      .play()
+      .catch((error2) => console.error("Audio playback error:", error2));
+  }
 });
 
 sound.addEventListener("click", function () {
