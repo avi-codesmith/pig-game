@@ -18,6 +18,7 @@ const sound = document.querySelector(".sound");
 const diceRollSound = new Audio("sounddice.mp3");
 const win = new Audio("win.mp3");
 const hold = new Audio("hold.mp3");
+const newgame = new Audio("newgame.mp3");
 
 let scores = [0, 0];
 let currentScore = 0;
@@ -40,6 +41,9 @@ btnRoll.addEventListener("click", function () {
         .play()
         .catch((error) => console.error("Audio playback error:", error));
     }
+    const dice = Math.trunc(Math.random() * 6 + 1);
+    diceEl.classList.remove("hidden");
+    diceEl.src = `dice-${dice}.png`;
 
     document.querySelector(".dice").classList.add("diceMove");
 
@@ -47,11 +51,8 @@ btnRoll.addEventListener("click", function () {
       document.querySelector(".dice").classList.remove("diceMove");
     }, 200);
     // Generating Random num.
-    const dice = Math.trunc(Math.random() * 6 + 1);
 
     // Display Dice
-    diceEl.classList.remove("hidden");
-    diceEl.src = `dice-${dice}.png`;
 
     // Switch to another player
     if (dice !== 1) {
@@ -63,8 +64,6 @@ btnRoll.addEventListener("click", function () {
       current0El.textContent = 0;
       currentScore = 0;
       activePlayer = activePlayer === 0 ? 1 : 0;
-      player0El.classList.toggle("player--active");
-      player1El.classList.toggle("player--active");
     }
   }
 });
@@ -108,19 +107,18 @@ btnHold.addEventListener("click", function () {
     }
   }
 });
-
-if (playing) {
-  document.querySelector(".btn--new").addEventListener("click", function () {
-    diceEl.classList.add("hidden");
-    score0El.textContent = 0;
-    score1El.textContent = 0;
-    document.querySelector(`#current--${activePlayer}`).textContent = 0;
-
-    currentScore = 0;
-    scores = [0, 0];
-    diceEl.classList.add("hidden");
-  });
-}
+btnNew.addEventListener("click", function () {
+  diceEl.classList.add("hidden");
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  document.querySelector(`#current--${activePlayer}`).textContent = 0;
+  newgame
+    .play()
+    .catch((error2) => console.error("Audio playback error:", error2));
+  currentScore = 0;
+  scores = [0, 0];
+  diceEl.classList.add("hidden");
+});
 
 sound.addEventListener("click", function () {
   if (sound.src.includes("volume.png")) {
