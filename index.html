@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="query.css" />
     <title>Pig Game</title>
   </head>
   <body>
+    <input type="color" title="Change Background" />
     <img class="sound" src="volume.png" alt="loading..." />
     <main>
       <section class="player player--0 player--active">
@@ -28,9 +28,17 @@
         </div>
       </section>
       <img src="dice-5.png" alt="Playing dice" class="dice diceMove" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
+      <button title="Play an new game" class="btn btn--new">🔄 New game</button>
+      <button title="Roll the dice to gain current score" class="btn btn--roll">
+        🎲 Roll dice
+      </button>
+      <button
+        title="Hold the current score to gain the actual score"
+        class="btn btn--hold"
+      >
+        📥 Hold
+      </button>
+      <button title="Target is 100" class="btn--target">🎯 Target = 100</button>
     </main>
     <script src="script.js"></script>
   </body>

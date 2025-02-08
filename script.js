@@ -6,6 +6,7 @@ const score0El = document.querySelector("#score--0");
 const score1El = document.querySelector("#score--1");
 const current0El = document.querySelector("#current--0");
 const current1El = document.querySelector("#current--1");
+const current = document.querySelectorAll(".current");
 const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
@@ -13,6 +14,13 @@ const btnHold = document.querySelector(".btn--hold");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 const sound = document.querySelector(".sound");
+const bColor = document.querySelector("input");
+const background = document.querySelector("body");
+
+// Change background color
+bColor.addEventListener("input", () => {
+  background.style.backgroundColor = bColor.value;
+});
 
 // Load dice roll sound
 const diceRollSound = new Audio("sounddice.mp3");
