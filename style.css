@@ -243,3 +243,24 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.badge {
+  position: absolute;
+  top: 17%;
+  right: 45%;
+  background-color: #9c36b5;
+  color: white;
+  padding: 3px 15px;
+  font-size: 14px;
+  border-radius: 24px;
+  z-index: 999999;
+  animation: move 0.5s alternate infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}

@@ -17,6 +17,7 @@ const sound = document.querySelector(".sound");
 const bColor = document.querySelector(".color");
 const background = document.querySelector("body");
 const target = document.querySelector(".target");
+const badge = document.querySelector(".badge");
 
 // Change background color
 bColor.addEventListener("input", () => {
@@ -49,6 +50,7 @@ diceEl.classList.add("hidden");
 
 // Rolling Dice
 btnRoll.addEventListener("click", function () {
+  badge.style.display = "none";
   if (playing) {
     // Reset and play dice roll sound
     if (volume) {
