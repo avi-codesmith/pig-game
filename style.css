@@ -17,7 +17,6 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  /* background: linear-gradient(to top left, #753682 0%, #bf2e34 100%); */
   background-color: #cc5de8;
   display: flex;
   align-items: center;
@@ -48,7 +47,6 @@ main {
   transition: all 0.75s;
 }
 
-/* ELEMENTS */
 .name {
   position: relative;
   font-size: 4rem;
@@ -102,15 +100,14 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
-.btn {
+.btn,
+.btn--target {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   color: #444;
   background: none;
   border: none;
-  font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -122,6 +119,12 @@ main {
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--target::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
 }
 
 .btn::first-letter {
@@ -160,7 +163,6 @@ main {
 }
 
 .player--winner {
-  /* background-color: #40c057; */
   background: linear-gradient(to left, lightgreen, #40c057);
 }
 
@@ -174,8 +176,8 @@ main {
 }
 
 .diceMove {
-  animation: rotate 0.3s infinite linear; /* Smooth and infinite rotation */
-  transform-origin: center center; /* Rotate around the center of the element */
+  animation: rotate 0.3s infinite linear;
+  transform-origin: center center;
   transform: translate(-50%);
   transition: all 0.3s ease;
 }
@@ -184,7 +186,7 @@ main {
     transform: translate(-50%) rotate(0deg) scale(1.2);
   }
   100% {
-    transform: translate(-50%) rotate(360deg) scale(1.2); /* Center and full rotation */
+    transform: translate(-50%) rotate(360deg) scale(1.2);
   }
 }
 
@@ -200,23 +202,9 @@ main {
 
 .btn--target {
   position: absolute;
-  left: 50%;
   top: 20%;
-  transform: translateX(-50%);
-  color: #444;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  transition: all 0.2s;
-
-  background-color: rgba(255, 255, 255);
-
-  padding: 1rem 2.5rem;
-  border-radius: 50rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  padding: 0.9rem 2.8rem;
+  cursor: default;
 }
 
 .color {
@@ -231,7 +219,6 @@ main {
   background-color: rgba(255, 255, 255);
   color: #444;
   border: none;
-  font-family: inherit;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -241,7 +228,6 @@ main {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
 }
 
 .badge {
