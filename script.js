@@ -14,12 +14,20 @@ const btnHold = document.querySelector(".btn--hold");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 const sound = document.querySelector(".sound");
-const bColor = document.querySelector("input");
+const bColor = document.querySelector(".color");
 const background = document.querySelector("body");
+const target = document.querySelector(".target");
 
 // Change background color
 bColor.addEventListener("input", () => {
   background.style.backgroundColor = bColor.value;
+});
+
+let targetInput = 100;
+
+target.addEventListener("input", function (event) {
+  targetInput = Number(event.target.value);
+  console.log(targetInput);
 });
 
 // Load dice roll sound
@@ -85,7 +93,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= targetInput) {
       playing = false;
       diceEl.classList.add("hidden");
       document
