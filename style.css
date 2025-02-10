@@ -250,3 +250,8 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: translateY(-3px);
   }
 }
+
+.cancle {
+  z-index: 99999;
+  filter: invert(15%);
+}

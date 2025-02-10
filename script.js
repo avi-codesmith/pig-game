@@ -11,6 +11,7 @@ const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
+const btnTar = document.querySelector(".btn--target");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 const sound = document.querySelector(".sound");
@@ -18,6 +19,16 @@ const bColor = document.querySelector(".color");
 const background = document.querySelector("body");
 const target = document.querySelector(".target");
 const badge = document.querySelector(".badge");
+
+target.addEventListener("input", () => {
+  let value = target.value;
+
+  if (value <= 0) {
+    target.value = "";
+  } else if (value.length > 3 || Number(value) > 999) {
+    target.value = value.slice(0, 3);
+  }
+});
 
 // Change background color
 bColor.addEventListener("input", () => {
@@ -28,7 +39,6 @@ let targetInput = 100;
 
 target.addEventListener("input", function (event) {
   targetInput = Number(event.target.value);
-  console.log(targetInput);
 });
 
 // Load dice roll sound
@@ -51,6 +61,11 @@ diceEl.classList.add("hidden");
 // Rolling Dice
 btnRoll.addEventListener("click", function () {
   badge.style.display = "none";
+  target.setAttribute("disabled", "true");
+  btnTar.title = "Can not set target during playing";
+  btnTar.style.cursor = "not-allowed";
+  target.style.cursor = "not-allowed";
+  btnTar.classList.add("cancle");
   if (playing) {
     // Reset and play dice roll sound
     if (volume) {
