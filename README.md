@@ -1,7 +1,5 @@
 # 1v1 Pig Game
-
-![PIG(game)](https://github.com/user-attachments/assets/6d6aef9b-0bec-4184-b54e-2d6a8ee58614)
-
+![PIG-game](https://github.com/user-attachments/assets/25c7a889-9fa8-4119-a143-12920aed5da1)
 ## [**Click to Play!**](https://pig-game-2v2.netlify.app/)
 
 | **How to play**      | **Description**                                                                                                                                         |
