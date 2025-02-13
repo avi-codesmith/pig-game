@@ -41,6 +41,20 @@ target.addEventListener("input", function (event) {
   targetInput = Number(event.target.value);
 });
 
+btnTar.addEventListener("click", () => {
+  // target.focus();
+  target.select();
+  // target.value = "";
+});
+
+background.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    target.style.caretColor = "#fff";
+  } else {
+    target.style.caretColor = "#9c36b5";
+  }
+});
+
 // Load dice roll sound
 const diceRollSound = new Audio("sounddice.mp3");
 const win = new Audio("win.mp3");
@@ -67,9 +81,8 @@ btnRoll.addEventListener("click", function () {
   target.style.cursor = "not-allowed";
   btnTar.classList.add("cancle");
   if (playing) {
-    // Reset and play dice roll sound
     if (volume) {
-      diceRollSound.currentTime = 0; // Reset to start
+      diceRollSound.currentTime = 0;
       diceRollSound
         .play()
         .catch((error) => console.error("Audio playback error:", error));
@@ -83,11 +96,7 @@ btnRoll.addEventListener("click", function () {
     setTimeout(() => {
       document.querySelector(".dice").classList.remove("diceMove");
     }, 200);
-    // Generating Random num.
 
-    // Display Dice
-
-    // Switch to another player
     if (dice !== 1) {
       currentScore += dice;
       document.querySelector(`#current--${activePlayer}`).textContent =

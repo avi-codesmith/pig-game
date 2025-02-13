@@ -204,7 +204,6 @@ main {
   position: absolute;
   top: 20%;
   padding: 0.9rem 2.8rem;
-  cursor: default;
 }
 
 .color {
@@ -223,6 +222,7 @@ main {
   text-transform: uppercase;
   font-weight: 400;
   outline: none;
+  caret-color: #9c36b5;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
