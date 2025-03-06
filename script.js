@@ -30,21 +30,23 @@ target.addEventListener("input", () => {
   }
 });
 
-// Change background color
 bColor.addEventListener("input", () => {
   background.style.backgroundColor = bColor.value;
 });
 
 let targetInput = 100;
 
-target.addEventListener("input", function (event) {
-  targetInput = Number(event.target.value);
+target.addEventListener("input", function () {
+  this.value = this.value.replace(/^0/, "");
+
+  if (this.value === "" || targetInput === 0) {
+    this.value = 0;
+  }
+  let targetInput = Number(this.value);
 });
 
 btnTar.addEventListener("click", () => {
-  // target.focus();
   target.select();
-  // target.value = "";
 });
 
 background.addEventListener("keydown", function (e) {
