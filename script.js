@@ -38,11 +38,11 @@ let targetInput = 100;
 
 target.addEventListener("input", function () {
   this.value = this.value.replace(/^0/, "");
+  targetInput = Number(this.value);
 
   if (this.value === "" || targetInput === 0) {
-    this.value = 0;
+    this.value = "0";
   }
-  let targetInput = Number(this.value);
 });
 
 btnTar.addEventListener("click", () => {
