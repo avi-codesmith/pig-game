@@ -1,5 +1,5 @@
 # About 1v1 Pig Game
-## This is interesting 1v1 number holding game with new features inspired by [@jonasschmedtmann](https://github.com/jonasschmedtmann)
+## This is interesting 1v1 number holding game with new features inspired by [@jonasschmedtmann](https://github.com/jonasschmedtmann/complete-javascript-course/tree/master/07-Pig-Game)
 ![PIG-game](https://github.com/user-attachments/assets/25c7a889-9fa8-4119-a143-12920aed5da1)
 ## [**Click to Play!**](https://pig-game-2v2.netlify.app/)
 
